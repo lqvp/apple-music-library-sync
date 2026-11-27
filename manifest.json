@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Apple Music Library Sync",
+  "version": "0.1.2",
+  "description": "Export and import your Apple Music library from music.apple.com.",
+  "permissions": ["scripting", "tabs"],
+  "host_permissions": ["https://music.apple.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Apple Music Library Sync"
+  }
+}
