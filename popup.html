@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apple Music Library Sync</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <h1>Apple Music Library Sync</h1>
+
+    <section class="card">
+      <h2>Export</h2>
+      <p>現在開いているApple Musicタブから、曲・アルバム・アーティスト・ミュージックビデオ・プレイリストをJSONで保存します。</p>
+      <button id="exportButton" type="button">ライブラリをExport</button>
+    </section>
+
+    <section class="card danger-zone">
+      <h2>Import</h2>
+      <p>Export JSONを選択して実行すると、カタログに存在する項目を現在のアカウントのライブラリへ追加します。</p>
+      <label class="file-label">
+        Export JSON
+        <input id="importFile" type="file" accept="application/json,.json">
+      </label>
+      <button id="importButton" type="button">ライブラリをImport</button>
+    </section>
+
+    <section class="card notes">
+      <h2>移行できないもの</h2>
+      <ul>
+        <li>アップロード曲・マッチしなかったローカル曲そのもの</li>
+        <li>追加日・再生回数・スキップ数</li>
+        <li>Love/レート/Suggest Less、プレイリストフォルダ構成</li>
+        <li>アーティスト単体の追加（曲/アルバム経由で表示されます）</li>
+      </ul>
+    </section>
+
+    <pre id="status" aria-live="polite">music.apple.com のタブを開いて実行してください。</pre>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
